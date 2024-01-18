@@ -1,15 +1,15 @@
 <?php
-
-
 $servido = "localhost";
 $user = "root";
-$senha = "";
+$senha = "vertrigo";
 $bd = "bancoteste";
+$conn = mysqli_connect($servido, $user, $senha, $bd);
 
-if (mysqli_connect($servido, $user, $senha, $bd) ) {
+
+/*if ( ) {
     echo "conectado!";
 } else 
-    echo "erro!"
+    echo "erro!!"
 
-
+*/
 ?>

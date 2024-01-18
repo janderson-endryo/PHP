@@ -12,14 +12,38 @@
   </head>
   <body>
 
-  <div class="jumbotron">
-  <h1 class="display-4">CASDATRO WEB</h1>
-  <p class="lead">SISTEMA SIMPLIFICADO DE CADASTRO</p>
-  <hr class="my-4">
-  <p>ACESSO AS FUNÇÕES</p>
-  <a class="btn btn-primary btn-lg" href="formulario.php" role="button">cadastro</a>
-  <a class="btn btn-primary btn-lg" href="#" role="button">pesquisa</a>
-</div>
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>cadastro</h1>
+
+            <form action="cadastro_script.php" method="post">
+
+            <div class="form-group">
+
+            <label for="seu nome">SEU NOME</label>
+            
+            <input type="text" class="form-control" name="nome" id="" placeholder="Seu Nome" required>
+            </div>
+
+            <div class="form-group">
+
+            <label for="mensagem">ESCREVA SUA MENSAGEM</label>
+
+            <textarea class="form-control" id="" rows="3" nome ="mensagem" placeholder="escreva uma mensagem"></textarea>
+
+            </div>
+
+            <div class="form-group">
+            <input type="submit" value="enviar" class='btn btn-success'>
+            </div>
+
+            </form>
+
+            <a class="btn btn-primary btn-lg" href="index.php" role="button">volta para opções</a>
+        </div>
+    </div>
+  </div>
 
     
 
