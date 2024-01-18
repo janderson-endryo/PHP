@@ -18,7 +18,7 @@
   <hr class="my-4">
   <p>ACESSO AS FUNÇÕES</p>
   <a class="btn btn-primary btn-lg" href="formulario.php" role="button">cadastro</a>
-  <a class="btn btn-primary btn-lg" href="#" role="button">pesquisa</a>
+  <a class="btn btn-primary btn-lg" href="pesquisa.php" role="button">pesquisa</a>
 </div>
 
     

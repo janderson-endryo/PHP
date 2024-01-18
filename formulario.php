@@ -17,7 +17,8 @@
         <div class="col">
             <h1>cadastro</h1>
 
-            <form action="cadastro_script.php" method="post">
+
+            <form action="cadastro_script.php" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
 
@@ -30,7 +31,7 @@
 
             <label for="mensagem">ESCREVA SUA MENSAGEM</label>
 
-            <textarea class="form-control" id="" rows="3" nome ="mensagem" placeholder="escreva uma mensagem"></textarea>
+            <textarea class="form-control" id="mensagem" rows="3" name ="mensagem" placeholder="escreva uma mensagem"></textarea>
 
             </div>
 
