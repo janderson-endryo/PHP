@@ -34,6 +34,7 @@
       <input class="form-control me-2" type="search" placeholder="pesquisar" aria-label="Search" name = "busca">
       <button class="btn btn-outline-success" type="submit">pesquisar</button>
     </form>
+    <a class="btn btn-primary btn-lg" href="index.php" role="button">volta para opções</a>
   </div>
 </nav>
 
@@ -46,7 +47,7 @@
       <th scope="col">mensagem</th>
       <th scope="col">data</th>
       <th scope="col">hora</th>
-      
+      <th scope="col">funções</th>
     </tr>
   </thead>
   <tbody>
@@ -58,6 +59,7 @@
     $mensagem = $linha['mensagem'];
     $data = $linha['data'];
     $hora = $linha['hora'];
+    $data = mostra_data($data);
 
     echo  "<tr>
              <th scope='row'>$id</th>
@@ -65,14 +67,17 @@
              <td>$mensagem</td>
              <td>$data</td>
              <td>$hora</td>
+             <td width = 150px>
+             <a href='editar_cadastro.php?id=$id' class='btn btn-success btn-sm'>editar</a> 
+             <a href='#' class='btn btn-danger btn-sm'>excluir</a>
+             </td>
         </tr>";
-    }
-  ?>
-   
+    } 
     
+  ?>
+
   </tbody>
 </table>
-  
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
