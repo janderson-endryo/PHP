@@ -24,10 +24,10 @@
   ?>
 
   <div class="container">
+    
     <div class="row">
         <div class="col">
-            <h1>cadastro</h1>
-
+            <h1>cadastro </h1>
 
             <form action="editar_script.php" method="post" enctype="multipart/form-data">
 
@@ -48,15 +48,18 @@
 
             <div class="form-group">
             <input type="submit" value="salva alteração" class='btn btn-success'>
+            <a class="btn btn-primary" href="pesquisa.php">volta para pesquisa</a>
             </div>
 
             <input type="hidden" name="id" value = "<?php echo $linhaa['id_mensagem'] ?>;">
+            
             </form>
             
-            <a class="btn btn-primary btn-lg" href="pesquisa.php">volta para pesquisa</a>
         </div>
     </div>
   </div>
+  
+  
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -10,8 +10,6 @@ $sql = "UPDATE tb_mural SET nome = '$nome', mensagem = '$mensagem',data = '$data
 
 
 
-
-
 if (mysqli_query($conn,$sql)) {
     header("location:pesquisa.php?page=view");
 } else {

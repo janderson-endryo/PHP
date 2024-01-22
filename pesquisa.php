@@ -69,12 +69,44 @@
              <td>$hora</td>
              <td width = 150px>
              <a href='editar_cadastro.php?id=$id' class='btn btn-success btn-sm'>editar</a> 
-             <a href='#' class='btn btn-danger btn-sm'>excluir</a>
+             <a href='#' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#confirma'
+             onclick=".'"' . "passa_dados($id,'$nome')". '"'." >excluir</a>
              </td>
         </tr>";
     } 
     
   ?>
+<!-- Modal -->
+<div class="modal fade" id="confirma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">confirmação de exclusão</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="excluir_script.php" method="POST">
+        <p>deseja realmente excluir essa pessoa: <b id ="nome">nome da pessoa</b></p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="history.go(0);">NÃO</button>
+        <input type="hidden" name="id" id="id_mensagem" value = "">
+        <input type="hidden" name="nome" id="nome_pessoa" value = "">
+        <input type="submit" class="btn btn-primary" value="SIM">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function passa_dados (id, nome) {
+    document.getElementById('nome').innerHTML = nome;
+    document.getElementById('id_mensagem').value = id;
+    document.getElementById('nome_pessoa').value = nome;
+  }
+</script>
 
   </tbody>
 </table>
@@ -85,3 +117,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
